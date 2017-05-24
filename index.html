@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Balloon Game</title>
+    <link rel="stylesheet" href="balloon-game.css">
+  </head>
+  <body>
+    <div class="counter">
+      0
+    </div>
+    <div class="title">POP THEM</div>
+    <div class="balloons">
+      <div class="balloon" id="balloon1">
+        <div class="inflatable"></div>
+        <div class="string"></div>
+      </div>
+      <!-- <div class="balloon" id="balloon2">
+        <div class="inflatable"></div>
+        <div class="string"></div>
+      </div>
+      <div class="balloon" id="balloon3">
+        <div class="inflatable"></div>
+        <div class="string"></div>
+      </div> -->
+   </div>
+  </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      var balloon = $(".balloon");
+      var counter = 0;
+      for (var i = 0; i < 10; i++) {
+        var balloonCopy = balloon.clone();
+
+        balloonCopy.css({
+          left: i*200
+        });
+        balloonCopy.appendTo(".balloons");
+        balloon.remove();
+        balloonCopy.click(function(){
+          $(this).remove();
+         counter = counter + 1;
+         $(".counter").html(counter);
+        });
+        balloon.click(function(){
+          $(this).remove();
+          counter = counter + 1;
+          $(".counter").html(counter);
+        });
+        balloonCopy.animate({ bottom: "100%"}, 12000);
+        // balloon.animate({bottom: "100%"}, 8000);
+      }
+
+      function preloadPopSound(){
+var audio = new Audio('balloon-pop.mp3');
+audio.preload = "auto";
+$(audio).on("loadeddata", start);  // jQuery checking
+return audio;
+}
+
+var pop_sound = preloadPopSound();
+
+
+    </script>
+  </html>

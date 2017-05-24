@@ -1,0 +1,71 @@
+html {
+  cursor: url(http://res.cloudinary.com/duyocqv0t/image/upload/v1495634268/portfolio/crosshair.png) 64 64, auto;
+
+}
+
+body{
+  background: url('http://res.cloudinary.com/duyocqv0t/image/upload/v1495634276/portfolio/dancing-156041.png') repeat center center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.counter{
+  background-color: white;
+  color: black;
+  font-size: 30px;
+  text-align: center;
+  font-family: arial;
+}
+
+.title{
+  font-size: 45px;
+  color: red;
+  font-weight: 900;
+  text-align: center;
+}
+.inflatable{
+  width: 100px;
+  height: 120px;
+  background-color: yellow;
+  border-radius: 50%;
+}
+
+.inflatable:hover{
+  opacity: .8;
+  background-color: yellow;
+  background: url("http://res.cloudinary.com/duyocqv0t/image/upload/v1495634281/portfolio/false-2061132_640.png") no-repeat;
+  background-size: cover;
+}
+
+.string{
+  width: 1px;
+  height: 100px;
+  background-color: black;
+  margin-left: 50px;
+}
+
+.balloons{
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: purple;
+  border-bottom: 3px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: flex-start;
+}
+
+.balloon{
+  margin-right: 15px;
+  margin-bottom: 15px;
+  position: absolute;
+  bottom: 0;
+}
+
+
+#balloon2 .inflatable{
+  background-color: red;
+}
+
+#balloon3 .inflatable{
+  background-color: blue;
+}
